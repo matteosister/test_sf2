@@ -1,0 +1,5 @@
+cypress_test:
+    resource: "@CypressTestBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

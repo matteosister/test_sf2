@@ -12,7 +12,7 @@ use Cypress\TestBundle\Document\Image;
 use Cypress\TestBundle\Document\Product;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class LoadProductData extends BaseFixtures
+class LoadImageData extends BaseFixtures
 {
     /**
      * Load data fixtures with the passed EntityManager
@@ -21,14 +21,12 @@ class LoadProductData extends BaseFixtures
      */
     public function load(ObjectManager $manager)
     {
-        for ($i = 1; $i <= 5; $i++) {
-            $p = new Product();
-            $p->setName('name '.$i);
-            $p->setPrice(rand(300, 12000));
-            $p->setImage($this->getReference('image'));
-            $manager->persist($p);
-        }
+        $image = new Image();
+        $image->setName('image file');
+        $image->setFile(realpath(__DIR__.'/../nikon.png'));
+        $manager->persist($image);
         $manager->flush();
+        $this->setReference('image', $image);
     }
 
     /**
@@ -38,6 +36,6 @@ class LoadProductData extends BaseFixtures
      */
     function getOrder()
     {
-        return 1000;
+        return 900;
     }
 }

@@ -35,6 +35,13 @@ class Product
     private $price;
 
     /**
+     * @var Image
+     *
+     * @MongoDB\ReferenceOne(targetDocument="Cypress\TestBundle\Document\Image")
+     */
+    private $image;
+
+    /**
      * Get Id
      *
      * @return string
@@ -90,5 +97,29 @@ class Product
     public function getPrice()
     {
         return $this->price;
+    }
+
+    /**
+     * Set Image
+     *
+     * @param \Cypress\TestBundle\Document\Image $image the image variable
+     *
+     * @return Product
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get Image
+     *
+     * @return \Cypress\TestBundle\Document\Image
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

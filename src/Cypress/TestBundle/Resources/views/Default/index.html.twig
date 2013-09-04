@@ -8,6 +8,7 @@
     <ul>
     {% for product in products %}
         <li>{{ product.name }}</li>
+        <li>{{ product.image.name }}</li>
     {% endfor %}
     </ul>
 {% endblock %}

@@ -30,8 +30,8 @@ assetic:
 #swiftmailer:
 #    delivery_address: me@example.com
 
-
 cypress_compass_elephant:
+    compass_binary_path: /home/matteo/.rvm/gems/ruby-2.0.0-p247/bin/compass
     compass_projects:
         test-project:
             path: %kernel.root_dir%/../src/Cypress/TestBundle/Resources/public/compass

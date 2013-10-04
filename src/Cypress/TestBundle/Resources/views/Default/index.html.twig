@@ -1,14 +1,27 @@
 {% extends "::base.html.twig" %}
 
 {% block stylesheets %}
-    <link href="{{ asset('bundles/cypresstest/compass/stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />
+    {#<link href="{{ asset('bundles/cypresstest/compass/stylesheets/screen.css') }}" media="screen, projection" rel="stylesheet" type="text/css" />#}
 {% endblock %}
 
 {% block body %}
     <ul>
-    {% for product in products %}
-        <li>{{ product.name }}</li>
-        <li>{{ product.image.name }}</li>
+    {% for brand in brands %}
+        <li>
+            {{ brand.name }}
+            <ul>
+            {% for model in brand.models if model.name == 'model 4' %}
+                <li>
+                    {{ model.name }}
+                    <ul>
+                    {% for finiture in model.finitures %}
+                        <li>{{ finiture.name }}</li>
+                    {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            </ul>
+        </li>
     {% endfor %}
     </ul>
 {% endblock %}

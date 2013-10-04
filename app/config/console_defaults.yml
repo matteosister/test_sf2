@@ -1,0 +1,8 @@
+cypress_console_defaults:
+    commands:
+        "doctrine:fixtures:load":
+            params:
+                - { param: "--append", value: true }
+                - { param: "--fixtures", value: "pippo" }
+#        "assets:install":
+#            - {name: "--symlink", value: true }

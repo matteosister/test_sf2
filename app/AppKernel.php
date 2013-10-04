@@ -29,6 +29,7 @@ class AppKernel extends Kernel
         $bundles[] = new Cypress\CompassElephantBundle\CypressCompassElephantBundle();
         $bundles[] = new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle();
         $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
+        $bundles[] = new Cypress\ConsoleDefaultsBundle\CypressConsoleDefaultsBundle();
 
         return $bundles;
     }

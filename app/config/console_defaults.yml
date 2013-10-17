@@ -1,8 +1,12 @@
 cypress_console_defaults:
     commands:
         "doctrine:fixtures:load":
+            params: [ "--append" ]
+
+        "rabbitmq:consumer":
+            params: [ "-w" ]
+
+        "cache:clear":
             params:
-                - { param: "--append", value: true }
-                - { param: "--fixtures", value: "pippo" }
-#        "assets:install":
-#            - {name: "--symlink", value: true }
+                - --no-warmup
+                - --no-optional-warmers

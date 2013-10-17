@@ -30,6 +30,7 @@ class AppKernel extends Kernel
         $bundles[] = new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle();
         $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
         $bundles[] = new Cypress\ConsoleDefaultsBundle\CypressConsoleDefaultsBundle();
+        $bundles[] = new OldSound\RabbitMqBundle\OldSoundRabbitMqBundle();
 
         return $bundles;
     }

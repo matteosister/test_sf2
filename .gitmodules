@@ -1,6 +1,0 @@
-[submodule "bundles/Cypress/CommandDefaultsBundle"]
-	path = bundles/Cypress/CommandDefaultsBundle
-	url = git@github.com:matteosister/CypressCommandDefaultsBundle.git
-[submodule "bundles/Cypress/ConsoleDefaultsBundle"]
-	path = bundles/Cypress/ConsoleDefaultsBundle
-	url = git@github.com:matteosister/CypressConsoleDefaultsBundle.git

@@ -101,21 +101,21 @@
         },
         {
             "name": "cypresslab/console-defaults-bundle",
-            "version": "0.1.0",
+            "version": "0.3.0",
             "target-dir": "Cypress/ConsoleDefaultsBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/matteosister/CypressConsoleDefaultsBundle.git",
-                "reference": "fdbb93a7914dcb3122e7a9b12b23c299aa78ecee"
+                "reference": "e9c7892747bce96e8d7891bf04ded445e556c75e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/matteosister/CypressConsoleDefaultsBundle/zipball/fdbb93a7914dcb3122e7a9b12b23c299aa78ecee",
-                "reference": "fdbb93a7914dcb3122e7a9b12b23c299aa78ecee",
+                "url": "https://api.github.com/repos/matteosister/CypressConsoleDefaultsBundle/zipball/e9c7892747bce96e8d7891bf04ded445e556c75e",
+                "reference": "e9c7892747bce96e8d7891bf04ded445e556c75e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2",
+                "php": ">=5.3.3",
                 "symfony/framework-bundle": ">=2.3"
             },
             "require-dev": {
@@ -140,7 +140,7 @@
                 }
             ],
             "description": "A bundle to add defaluts argument to the symfony2 console",
-            "time": "2013-10-17 13:10:25"
+            "time": "2013-10-17 13:52:12"
         },
         {
             "name": "doctrine/annotations",

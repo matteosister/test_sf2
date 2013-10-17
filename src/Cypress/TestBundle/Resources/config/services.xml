@@ -17,4 +17,9 @@
         </service>
     </services>
     -->
+
+    <services>
+        <service id="cypress.service.consumer" class="Cypress\Service\Consumer">
+        </service>
+    </services>
 </container>

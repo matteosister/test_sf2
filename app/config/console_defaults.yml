@@ -5,8 +5,3 @@ cypress_console_defaults:
 
         "rabbitmq:consumer":
             params: [ "-w" ]
-
-        "cache:clear":
-            params:
-                - --no-warmup
-                - --no-optional-warmers

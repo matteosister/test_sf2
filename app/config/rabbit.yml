@@ -1,0 +1,19 @@
+old_sound_rabbit_mq:
+    connections:
+        default:
+            host:     '10.0.0.9'
+            port:     5672
+            user:     'guest'
+            password: 'guest'
+            vhost:    '/'
+            lazy:     false
+    producers:
+        test:
+            connection:       default
+            exchange_options: {name: 'test', type: direct}
+    consumers:
+        test:
+            connection:       default
+            exchange_options: {name: 'test', type: direct}
+            queue_options:    {name: 'test'}
+            callback:         cypress.service.consumer

@@ -19,7 +19,13 @@
     -->
 
     <services>
-        <service id="cypress.service.consumer" class="Cypress\Service\Consumer">
+        <service id="cypress.service.consumer" class="Cypress\Service\Consumer" />
+        <service id="cypress.rabbitmq_handler" class="Cypress\Service\Monolog\RabbitMQHandler">
+            <argument type="service" id="old_sound_rabbit_mq.log_producer" />
         </service>
+        <service id="cypress.service.consumer.log" class="Cypress\Service\Consumer\Log" />
+
     </services>
+
+
 </container>

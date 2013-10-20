@@ -23,6 +23,9 @@ monolog:
         chromephp:
             type:  chromephp
             level: info
+        rabbit:
+            type:  service
+            id:    cypress.rabbitmq_handler
 
 assetic:
     use_controller: true

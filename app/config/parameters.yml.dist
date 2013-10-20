@@ -13,3 +13,6 @@ parameters:
 
     locale:            en
     secret:            ThisTokenIsNotSoSecretChangeIt
+
+    rabbit_host:       10.0.0.9
+    rabbit_port:       1234

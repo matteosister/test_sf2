@@ -13,19 +13,19 @@ web_profiler:
 
 monolog:
     handlers:
-        main:
-            type:  stream
-            path:  %kernel.logs_dir%/%kernel.environment%.log
-            level: debug
+        rabbit:
+            type:  service
+            id:    cypress.rabbitmq_handler
+#        main:
+#            type:  stream
+#            path:  %kernel.logs_dir%/%kernel.environment%.log
+#            level: debug
         firephp:
             type:  firephp
             level: info
         chromephp:
             type:  chromephp
             level: info
-        rabbit:
-            type:  service
-            id:    cypress.rabbitmq_handler
 
 assetic:
     use_controller: true

@@ -6,26 +6,32 @@ old_sound_rabbit_mq:
             user:     'guest'
             password: 'guest'
             vhost:    '/'
-            lazy:     false
+            lazy:     true
 
     producers:
-        log:
-            connection: default
-            exchange_options: { name: 'log', type: direct }
+#        test:
+#            connection:       default
+#            exchange_options: {name: 'test', type: direct}
 
-        test:
-            connection:       default
-            exchange_options: {name: 'test', type: direct}
+        symfony_log:
+            connection: default
+            exchange_options: { name: 'symfony_log', type: direct }
 
     consumers:
-        test:
-            connection:       default
-            exchange_options: {name: 'test', type: direct}
-            queue_options:    {name: 'test'}
-            callback:         cypress.service.consumer
+#        test:
+#            connection:       default
+#            exchange_options: {name: 'test', type: direct}
+#            queue_options:    {name: 'test'}
+#            callback:         cypress.service.consumer
 
-        log:
+        symfony_log:
             connection:       default
-            exchange_options: {name: 'log', type: direct}
-            queue_options:    {name: 'log'}
+            exchange_options: { name: 'symfony_log', type: direct }
+            queue_options:    { name: 'symfony_log' }
+            callback:         cypress.service.consumer.log
+
+    anon_consumers:
+        rabbit_log:
+            connection:       default
+            exchange_options: {name: 'log1', type: direct }
             callback:         cypress.service.consumer.log

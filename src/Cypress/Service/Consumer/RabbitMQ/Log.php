@@ -7,7 +7,7 @@
  */
 
 
-namespace Cypress\Service\Consumer;
+namespace Cypress\Service\Consumer\RabbitMQ;
 
 
 use OldSound\RabbitMqBundle\RabbitMq\ConsumerInterface;
@@ -17,6 +17,7 @@ class Log implements ConsumerInterface
 {
     public function execute(AMQPMessage $msg)
     {
-        echo $msg->body;
+        var_dump('sisisi');
+        echo sprintf('%s: %s', $msg->get('routing_key'), $msg->body);
     }
 }
